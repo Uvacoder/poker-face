@@ -16,3 +16,9 @@ npm run dev
 ```bash
 npm run test
 ```
+
+### With coverage (currently 100%)
+
+```bash
+npm run test:coverage
+```

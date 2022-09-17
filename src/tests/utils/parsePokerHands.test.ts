@@ -1,5 +1,5 @@
 import { test, expect, describe } from "vitest";
-import { parsePokerHands } from "../utils/parsePokerHands";
+import { parsePokerHands } from "../../utils/parsePokerHands";
 
 describe("parsePokerHands function", () => {
   test("contains an array of 5 elements", () => {

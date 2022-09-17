@@ -1,9 +1,24 @@
 import { test, expect, describe } from "vitest";
-import { PokerHand } from "../classes/PokerHand";
-import { PokerHands } from "../enums/PokerHands";
-import { revealPokerHand } from "../utils/revealPokerHand";
+import { PokerHand } from "../../classes/PokerHand";
+import { PokerHands } from "../../enums/PokerHands";
+import { revealPokerHand } from "../../utils/revealPokerHand";
 
 describe("revealPokerHand function", () => {
+  test("returns a high card hand", () => {
+    const hand: PokerHand = {
+      cards: [
+        { rank: "3", suit: "D" },
+        { rank: "2", suit: "S" },
+        { rank: "9", suit: "C" },
+        { rank: "A", suit: "H" },
+        { rank: "K", suit: "D" },
+      ],
+    };
+    const result = revealPokerHand(hand);
+    expect(result).toBe(PokerHands.HighCard);
+  });
+    
+
   test("One Pair contains one number that occurs twice", () => {
     const hand: PokerHand = {
       cards: [
